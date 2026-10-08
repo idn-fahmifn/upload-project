@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- judul -->
+    <h1>Ini adalah judul h1</h1>
+    <h2>Ini adalah judul h2</h2>
+    <h3>Ini adalah judul h3</h3>
+    <h4>Ini adalah judul h4</h4>
+    <h5>Ini adalah judul h5</h5>
+    <h6>Ini adalah judul h6</h6>
+
+    <p></p>
+    <h1></h1>
+    <p class="nama-class"></p>
+    <p class="nama-class"></p>
+    <p class="class-pertama class-kedua"></p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dicta.
+    </p>
+    <p>
+      Lorem <b>tebal</b> ipsum, dolor sit amet consectetur adipisicing elit
+      <strong>Ini penting</strong> . Dolores, qui aspernatur debitis odit
+      adipisci repellat. <br />
+      Mollitia <i>ini miring</i> dolore natus voluptates,
+      <em>ini adalah tag miring em</em> quam cumque porro distinctio eaque.
+      Unde, vitae! Voluptate excepturi animi mollitia!
+    </p>
+
+    <p>Berikut adalah fitur unggulan kami :</p>
+    <ul>
+      <li>Smart Authorization</li>
+      <li>UI Friendly</li>
+      <li>SEO Friendly</li>
+    </ul>
+
+    <p>Daftar tools yang digunakan :</p>
+    <ol type="i" start="20">
+      <li>Laravel Framework</li>
+      <li>Bootstrap</li>
+      <li>Next JS</li>
+      <li>Postgree SQL</li>
+    </ol>
+
+    <p>lihat tentang saya <a href="about.html">disini</a></p>
+    <p>lihat project saya <a href="project/project.html">disini</a></p>
+    <p>Lihat kelas Laravel <a href="../web-lanjutan/laravel.html">disini</a></p>
+    <p>
+      Lihat jadwal selengkapnya
+      <a
+        href="https://jadwal.idn.id/semua-training"
+        title="website IDN"
+        target="_blank"
+        >disini</a
+      >
+    </p>
+
+    <!-- task
+    
+    1. Redirect ke halaman tentang saya
+    2. Redirect ke sosial media temen temen (Instagram, web, linked, tiktol).
+    
+    -->
+
+    <!-- gambar -->
+    <img
+      src="https://www.idn.id/wp-content/uploads/2022/11/LOGO-ID-Networkers-IDN.ID_.png"
+      width="100"
+      alt="logo lebar"
+    />
+    <img src="assets/image/idn-logo.png" width="100" alt="logo tinggi" />
+
+    <video autoplay muted loop width="100">
+      <source
+        src="https://res.cloudinary.com/demo/video/upload/dog.mp4"
+        type=""
+      />
+      Browser tidak didukung.
+    </video>
+
+    <audio
+      src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    ></audio>
+
+    <form action="">
+      <div class="">
+        <label for="username">Nama Pengguna</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class=""
+          placeholder="ex. fahmifn"
+          required
+        />
+      </div>
+      <div class="">
+        <label for="nama_lengkap">Nama</label>
+        <input
+          type="text"
+          name="nama"
+          id="nama_lengkap"
+          class=""
+          readonly
+          value="Fahmi nuradi"
+          required
+        />
+      </div>
+      <div class="">
+        <label for="nama_lengkap">Jurusan</label>
+        <select name="" id="" required>
+          <option value="" disabled>Pilih jurusan</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+        </select>
+      </div>
+
+      <div class="">
+        <label for="nama_lengkap">Deskripsi</label>
+        <textarea name="desc" id=""></textarea>
+      </div>
+
+      <div class="">
+        <button type="submit">Kirim data</button>
+      </div>
+    </form>
+
+
+    <h3>Tabel Penjualan</h3>
+    <p>Tabel Laporan Penjualan Tahunan. Tahun 2025</p>
+
+    <table style="width: 80dvw; margin: 100px 10px; border-collapse: collapse;" border="1">
+        <thead>
+            <th>No</th>
+            <th>Divisi</th>
+            <th>Laporan Q1</th>
+            <th>Laporan Q2</th>
+            <th>Laporan Q3</th>
+            <th>Laporan Q4</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Marketing Teknologi</td>
+                <td>IDR 1.432.567.876</td>
+                <td>IDR 1.452.667.576</td>
+                <td>IDR 3.451.845.576</td>
+                <td>IDR 2.123.845.434</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Marketing Teknologi</td>
+                <td>IDR 1.432.567.876</td>
+                <td>IDR 1.452.667.576</td>
+                <td>IDR 3.451.845.576</td>
+                <td>IDR 2.123.845.434</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Marketing Teknologi</td>
+                <td colspan="2">IDR 1.432.567.876</td>
+                <td>IDR 3.451.845.576</td>
+                <td rowspan="3">IDR 2.123.845.434</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Marketing Teknologi</td>
+                <td>IDR 1.432.567.876</td>
+                <td>IDR 1.452.667.576</td>
+                <td>IDR 3.451.845.576</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Marketing Teknologi</td>
+                <td>IDR 1.432.567.876</td>
+                <td>IDR 1.452.667.576</td>
+                <td>IDR 3.451.845.576</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>

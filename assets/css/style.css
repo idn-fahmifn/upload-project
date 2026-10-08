@@ -1,0 +1,267 @@
+:root{
+    --color-red: #ff0000;
+    --color-blue: #0088cc;
+    --color-yellow: #ffff00;
+    --color-orange: #ff6611;
+}
+
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.square{
+    width: 140px;
+    background-color: var(--color-orange);
+    padding: 24px;
+}
+
+.judul-a, .judul-b{
+    color: var(--color-blue);
+    font-weight: 800;
+}
+
+.judul-a{
+    font-size: 1.5em;
+}
+
+.kartu{
+    padding: 16px;
+    background-color: #ff6611;
+    width: 240px;
+    transition: 1s;
+}
+
+.kartu p{
+    color: #ffff;
+}
+
+.kartu:hover{
+    background-color: #ff6666;
+    transform: scale(1.1);
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #f0f8ff;
+    border: 0.4px solid #333;
+    padding: 20px;
+    margin: 100px 30px;
+    border-radius: 8px;
+}
+
+.card, .card-image, .card-gradient{
+    width: 240px;
+    min-height: 320px;
+    padding: 12px;
+    margin: 36px 16px;
+    border: 0.6px solid #3344;
+    border-radius: 16px;
+}
+
+.card{
+    background-color: #f0f8ff;
+}
+
+.card-gradient{
+    background: linear-gradient(to top right, #ff6666, #ff6611);
+}
+
+.card-image{
+    width: 80dvw;
+    height: 40dvh;
+    background: linear-gradient(to bottom, #34343480), 
+    url("https://static.vecteezy.com/system/resources/previews/041/885/560/non_2x/floral-pattern-with-flowers-and-leaves-golden-colors-isolated-backgrounds-for-fashionable-modern-wallpaper-or-textiles-books-cover-digital-interfaces-print-designs-template-materials-paper-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f0f8ff;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.container{ 
+    width: 80dvw;
+    padding: 24px;
+    margin: 24px;
+    border: 0.5px solid #343434;
+}
+
+.card-element{
+    width: 210px;
+    padding: 24px;
+    border: 0.5px solid #343434;
+    background: linear-gradient(to top right, #ff6666, #ff6611);
+    color: #f0f8ff;
+    margin: 24px;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-inline{
+    display: inline;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-none{
+    display: none;
+}
+
+.v-hidden{
+    visibility: hidden;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.running{
+    background-color: #f0f8ff;
+    padding: 6px 12px;
+    color: #ff0000;
+    border-radius: 16px;
+    border: 1px solid #ff0000;
+    top: 0;
+    right: 0;
+    font-size: 0.7em;
+    font-weight: 900;
+}
+
+.btn-callus{
+    width: 100px;
+    background-color: var(--color-blue);
+    text-align: center;
+    padding: 12px;
+    font-weight: 800;
+    border-radius: 24px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
+
+.btn-callus a{
+    color: #f0f8ff;
+    text-decoration: none;
+}
+
+.sticky{
+    background-color: #ff6666;
+    position: sticky;
+    color: #f0f8ff;
+    top: 0;
+    z-index: 100;
+}
+
+.h-30{
+    height: 30dvh;
+}
+
+.d-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card-flexbox{
+    padding: 24px;
+    border: 0.5px solid #343434;
+    background: linear-gradient(to top right, #ff6666, #ff6611);
+    color: #f0f8ff;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 210px;
+}
+
+.navbar{ 
+    width: 80dvw;
+    height: 100px;
+    background: linear-gradient(to top left, #ff6611, #ff6666);
+    margin: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f0f8ff;
+    gap: 30px;
+}
+
+.navbar-list ul li{
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.d-grid{
+    display: grid;
+    gap: 10px;
+}
+
+.grid-col-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.elemen-grid{
+    padding: 16px;
+    border: 0.5px solid #343434;
+    /* margin: 20px; */
+}
+
+.grid-col-3 .elemen-grid:nth-child(1){
+    background-color: #ff6611;
+    grid-column: 1 / 3;
+    grid-row: 1/3;
+}
+
+.grid-col-3 .elemen-grid:nth-child(5){
+    background-color: #ff6666;
+}
+
+.grid-area{
+    grid-template-rows: repeat(3, 140px);
+    grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer"
+    ;
+}
+
+.grid-header{
+    background-color: #ffff00;
+    padding: 16px;
+    grid-area: header;
+}
+
+.grid-sidebar{
+    background-color: #ff6611;
+    padding: 16px;
+    grid-area: sidebar;
+}
+
+.grid-main{
+    background-color: #f0f8ff;
+    padding: 16px;
+    grid-area: main;
+}
+.grid-footer{
+    background-color: #ff6666;
+    padding: 16px;
+    grid-area: footer;
+}
+
+.gallery{
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
