@@ -3,187 +3,490 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simple Company</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      :root {
+        --color-red: #b80000;
+        --color-blue: #0088cc;
+        --color-yellow: #ffff00;
+        --color-orange: #ff6611;
+        --color-red-gradient: #ff6666;
+        --bg-hero-red-gradient: #b8000070;
+        --bg-hero-orange-gradient: #ff661170;
+        --font-color: #343434;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      body {
+        box-sizing: border-box;
+      }
+
+      #header {
+        background: linear-gradient(to right, var(--color-red), #ff0000);
+        width: 100dvw;
+        height: 60px;
+        padding: 8px 0;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .space-around {
+        justify-content: space-around;
+      }
+
+      .align-items-center {
+        align-items: center;
+      }
+
+      .wide-logo {
+        width: 140px;
+      }
+
+      .nav-item {
+        display: inline-block;
+      }
+
+      .nav-item a {
+        color: #ffeeff;
+        text-decoration: none;
+        margin-left: 8px;
+        transition: 2s ease-in-out;
+      }
+      .nav-item a:hover {
+        border-bottom: #ffeeff solid 5px;
+      }
+
+      #hero {
+        width: 100dvw;
+        height: 80dvh;
+        background:
+          linear-gradient(to bottom, #11111190),
+          url("https://picsum.photos/1440/800");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .align-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .gap-1 {
+        gap: 16px;
+      }
+
+      .d-column {
+        flex-direction: column;
+      }
+
+      .area-title {
+        text-align: center;
+        color: #ffeeff;
+      }
+
+      .btn-explore {
+        background-color: var(--color-red);
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: #ffeeff;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 24px;
+      }
+
+      #produk {
+        width: 100dvw;
+        min-height: 80dvh;
+        padding: 32px 0;
+      }
+
+      .produk,
+      .layanan,
+      .gallery,
+      .contact {
+        margin: 24px auto;
+        text-align: center;
+      }
+
+      .divider {
+        width: 100px;
+        height: 5px;
+        background-color: var(--color-red);
+        margin: 8px auto;
+      }
+
+      .card-flex {
+        width: 80%;
+        margin: auto;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 320px;
+        background-color: #ffffff;
+        border: #34343450 0.4px solid;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      .card h3 {
+        margin-top: 16px;
+      }
+
+      #layanan {
+        width: 100dvw;
+        min-height: 50dvh;
+      }
+
+      .content-about {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .d-grid {
+        display: grid;
+      }
+
+      .grid-col-4 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: 24px 0;
+        gap: 12px;
+      }
+
+      #gallery {
+        width: 100dvw;
+        background-color: #e6e6e6;
+      }
+
+      .grid-gallery {
+        width: 80%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 240px);
+        gap: 24px;
+        margin: 48px auto;
+      }
+
+      .card-image {
+        border: #34343450 0.4px solid;
+        border-radius: 8px;
+        background:
+          linear-gradient(to bottom, #11111190),
+          url("https://picsum.photos/320/240");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: #e6e6e6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #contact {
+        width: 100dvw;
+        min-height: 20dvh;
+        background-color: var(--color-red);
+        color: #ffffff;
+      }
+
+      .bg-white {
+        background-color: #e6e6e6;
+      }
+
+      .sosial-media {
+        width: 80%;
+        gap: 32px;
+        margin: 12px auto;
+        display: flex;
+        justify-content: center;
+        padding: 32px 0;
+      }
+
+      .sosial-media div {
+        width: 240px;
+      }
+
+      .footer {
+        width: 100dvw;
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+        background-color: #6b0000;
+        color: #ffffff;
+      }
+    </style>
   </head>
   <body>
-    <!-- judul -->
-    <h1>Ini adalah judul h1</h1>
-    <h2>Ini adalah judul h2</h2>
-    <h3>Ini adalah judul h3</h3>
-    <h4>Ini adalah judul h4</h4>
-    <h5>Ini adalah judul h5</h5>
-    <h6>Ini adalah judul h6</h6>
+    <!-- area navbar -->
+    <header id="header">
+      <div class="d-flex space-around align-items-center">
+        <div class="logo">
+          <img
+            src="https://www.idn.id/wp-content/uploads/2023/01/LOGO-ID-Networkers-IDN.ID-Putih-1024x320.png"
+            class="wide-logo"
+            alt="Logo IDN"
+          />
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item"><a href="">Beranda</a></li>
+            <li class="nav-item"><a href="">Produk</a></li>
+            <li class="nav-item"><a href="">Layanan</a></li>
+            <li class="nav-item"><a href="">Galeri</a></li>
+            <li class="nav-item"><a href="">Hubungi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <p></p>
-    <h1></h1>
-    <p class="nama-class"></p>
-    <p class="nama-class"></p>
-    <p class="class-pertama class-kedua"></p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dicta.
-    </p>
-    <p>
-      Lorem <b>tebal</b> ipsum, dolor sit amet consectetur adipisicing elit
-      <strong>Ini penting</strong> . Dolores, qui aspernatur debitis odit
-      adipisci repellat. <br />
-      Mollitia <i>ini miring</i> dolore natus voluptates,
-      <em>ini adalah tag miring em</em> quam cumque porro distinctio eaque.
-      Unde, vitae! Voluptate excepturi animi mollitia!
-    </p>
-
-    <p>Berikut adalah fitur unggulan kami :</p>
-    <ul>
-      <li>Smart Authorization</li>
-      <li>UI Friendly</li>
-      <li>SEO Friendly</li>
-    </ul>
-
-    <p>Daftar tools yang digunakan :</p>
-    <ol type="i" start="20">
-      <li>Laravel Framework</li>
-      <li>Bootstrap</li>
-      <li>Next JS</li>
-      <li>Postgree SQL</li>
-    </ol>
-
-    <p>lihat tentang saya <a href="about.html">disini</a></p>
-    <p>lihat project saya <a href="project/project.html">disini</a></p>
-    <p>Lihat kelas Laravel <a href="../web-lanjutan/laravel.html">disini</a></p>
-    <p>
-      Lihat jadwal selengkapnya
-      <a
-        href="https://jadwal.idn.id/semua-training"
-        title="website IDN"
-        target="_blank"
-        >disini</a
+    <main>
+      <section
+        id="hero"
+        class="d-flex justify-center align-center d-column gap-1"
       >
-    </p>
+        <div class="area-title">
+          <h1 data-aos="fade-up" data-aos-duration="3000">Gail AI Company</h1>
+          <p data-aos="fade-down">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga in
+            explicabo totam officiis enim ipsum possimus dignissimos aperiam
+            expedita quam.
+          </p>
+        </div>
+        <a href="" class="btn-explore">Jelajahi AI</a>
+      </section>
 
-    <!-- task
-    
-    1. Redirect ke halaman tentang saya
-    2. Redirect ke sosial media temen temen (Instagram, web, linked, tiktol).
-    
-    -->
+      <section id="produk">
+        <header class="produk">
+          <h2>Produk Kami</h2>
+          <div class="divider"></div>
+        </header>
+        <div class="d-flex card-flex justify-center" id="dataProduk">
+          <!-- data diload dari js -->
+        </div>
+      </section>
+      <section id="layanan">
+        <header class="layanan">
+          <h2>Layanan Kami</h2>
+          <div class="divider"></div>
+        </header>
+        <div class="content-about">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam
+            libero iste veritatis itaque quia aut aliquam maxime nihil eius
+            eligendi error laborum at, quisquam, exercitationem quis. Non, animi
+            odit.
+          </p>
+          <div class="d-grid grid-col-4">
+            <div class="card">
+              <i data-feather="clock"></i>
+              <h3>Layanan 24/7</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+                nihil!
+              </p>
+            </div>
+            <div class="card">
+              <i data-feather="unlock"></i>
+              <h3>Unilimited Token</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+                nihil!
+              </p>
+            </div>
+            <div class="card">
+              <i data-feather="monitor"></i>
+              <h3>UI Friendly</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+                nihil!
+              </p>
+            </div>
+            <div class="card">
+              <i data-feather="cloud"></i>
+              <h3>Cloud Base</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+                nihil!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- gambar -->
-    <img
-      src="https://www.idn.id/wp-content/uploads/2022/11/LOGO-ID-Networkers-IDN.ID_.png"
-      width="100"
-      alt="logo lebar"
-    />
-    <img src="assets/image/idn-logo.png" width="100" alt="logo tinggi" />
+      <section id="gallery">
+        <header class="gallery">
+          <h2>Galeri AI Kami</h2>
+          <div class="divider"></div>
+        </header>
 
-    <video autoplay muted loop width="100">
-      <source
-        src="https://res.cloudinary.com/demo/video/upload/dog.mp4"
-        type=""
-      />
-      Browser tidak didukung.
-    </video>
+        <div class="d-grid grid-gallery">
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+          <div class="card-image">
+            <h3>Ai Agentic For Daily</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+              distinctio?
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <audio
-      src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-    ></audio>
+      <section id="contact">
+        <header class="contact">
+          <h2>Hubungi Kami</h2>
+          <div class="divider bg-white"></div>
+        </header>
 
-    <form action="">
-      <div class="">
-        <label for="username">Nama Pengguna</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          class=""
-          placeholder="ex. fahmifn"
-          required
-        />
-      </div>
-      <div class="">
-        <label for="nama_lengkap">Nama</label>
-        <input
-          type="text"
-          name="nama"
-          id="nama_lengkap"
-          class=""
-          readonly
-          value="Fahmi nuradi"
-          required
-        />
-      </div>
-      <div class="">
-        <label for="nama_lengkap">Jurusan</label>
-        <select name="" id="" required>
-          <option value="" disabled>Pilih jurusan</option>
-          <option value="Teknik Informatika">Teknik Informatika</option>
-          <option value="Sistem Informasi">Sistem Informasi</option>
-          <option value="Digital Marketing">Digital Marketing</option>
-        </select>
-      </div>
+        <div class="sosial-media d-flex">
+          <div class="">
+            <h3>Lokasi Kami</h3>
+            <p>
+              Jl. Pal Merah Utara II No.245, RT.9/RW.16, Palmerah, Kec.
+              Palmerah, Kota Jakarta Barat, DKI Jakarta, Indonesia, Kode Pos
+              11480
+            </p>
+          </div>
+          <div class="">
+            <h3>Lokasi Kami</h3>
+            <p>
+              Jl. Pal Merah Utara II No.245, RT.9/RW.16, Palmerah, Kec.
+              Palmerah, Kota Jakarta Barat, DKI Jakarta, Indonesia, Kode Pos
+              11480
+            </p>
+          </div>
+          <div class="">
+            <h3>Lokasi Kami</h3>
+            <p>
+              Jl. Pal Merah Utara II No.245, RT.9/RW.16, Palmerah, Kec.
+              Palmerah, Kota Jakarta Barat, DKI Jakarta, Indonesia, Kode Pos
+              11480
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div class="">
-        <label for="nama_lengkap">Deskripsi</label>
-        <textarea name="desc" id=""></textarea>
-      </div>
+      <section id="footer">
+        <div class="footer">
+          <p>&copy; IDNETWORKERS - Materi Belajar Web Basic 2026</p>
+        </div>
+      </section>
+    </main>
 
-      <div class="">
-        <button type="submit">Kirim data</button>
-      </div>
-    </form>
+    <script>
+      feather.replace();
+    </script>
 
+    <script>
+      AOS.init();
+    </script>
 
-    <h3>Tabel Penjualan</h3>
-    <p>Tabel Laporan Penjualan Tahunan. Tahun 2025</p>
+    <script>
+      const products = document.getElementById("dataProduk");
 
-    <table style="width: 80dvw; margin: 100px 10px; border-collapse: collapse;" border="1">
-        <thead>
-            <th>No</th>
-            <th>Divisi</th>
-            <th>Laporan Q1</th>
-            <th>Laporan Q2</th>
-            <th>Laporan Q3</th>
-            <th>Laporan Q4</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Marketing Teknologi</td>
-                <td>IDR 1.432.567.876</td>
-                <td>IDR 1.452.667.576</td>
-                <td>IDR 3.451.845.576</td>
-                <td>IDR 2.123.845.434</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Marketing Teknologi</td>
-                <td>IDR 1.432.567.876</td>
-                <td>IDR 1.452.667.576</td>
-                <td>IDR 3.451.845.576</td>
-                <td>IDR 2.123.845.434</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Marketing Teknologi</td>
-                <td colspan="2">IDR 1.432.567.876</td>
-                <td>IDR 3.451.845.576</td>
-                <td rowspan="3">IDR 2.123.845.434</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Marketing Teknologi</td>
-                <td>IDR 1.432.567.876</td>
-                <td>IDR 1.452.667.576</td>
-                <td>IDR 3.451.845.576</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Marketing Teknologi</td>
-                <td>IDR 1.432.567.876</td>
-                <td>IDR 1.452.667.576</td>
-                <td>IDR 3.451.845.576</td>
-            </tr>
-        </tbody>
-    </table>
+      async function loadData() {
+        try {
+          const api =
+            "https://6ac75f1e75a4ce3fe721ab20.mockapi.io/api/v1/products";
+          const res = await fetch(api);
+          const data = await res.json();
 
+          products.innerHTML = "<p>Sedang memuat data ...</p>";
+          products.innerHTML = "";
+
+          data.forEach((listProduct) => {
+            products.innerHTML += `
+            <div class="card">
+            <img src="https://picsum.photos/320/240" alt="product-image" />
+            <h3>${listProduct.product_name}</h3>
+            <p>
+            ${listProduct.product_desc}
+            </p>
+          </div>
+            `;
+          });
+        } catch (error) {
+          console.log("Ada Error", error);
+        }
+      }
+
+      loadData();
+    </script>
   </body>
 </html>
